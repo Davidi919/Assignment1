@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/davidinabinette/Documents/DSU/CSC-250/Assignment1",
+      "program": "/Users/davidinabinette/Documents/DSU/CSC-250/Assignment1/build/Debug/outDebug"
+    }
+  ]
+}
