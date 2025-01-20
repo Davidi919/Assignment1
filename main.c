@@ -30,16 +30,12 @@ Write a program that does the following each time it loops:
 //---------------------------------------------
 /*Functions*/
 //---------------------------------------------
-
-//---------------------------------------------
-/*begin main*/
-//---------------------------------------------
-
-int main()
+void loopTasks()
 {
-
     // loop variables
-    int i,m = 0;
+    int i = 0; 
+    int m = 0;
+    int n = 1;
     int randArray[4];
     int largest = randArray[0];
 
@@ -53,7 +49,7 @@ int main()
     // printf("numbers from rand: %d\n", rand()%(50 - 1 + 1) + 1);
 
     //---------------------------------------------
-    /*begin task 1 loops*/
+    /*begin task loops*/
     //---------------------------------------------
     // create the random number array and loop through it
     while (i < 5)
@@ -62,28 +58,29 @@ int main()
         i += 1;
     }
 
-
-    //print out the random array
-    //printf("\n--------------------------\n");
+    // print out the random array
+    // printf("\n--------------------------\n");
     printf("Random Number Array: ");
     for (int j = 0; j < 5; j++)
     {
         printf("%s%d", (j > 0 ? ", " : ""), randArray[j]);
     }
     printf("\n");
-while (m < 6)
-{
-    printf("yes\n");
-    m += 1;
-}
+    while (m < 6)
+    {
+        printf("Yes\n");
+        m += 1;
+    }
 
-    
-    
-    
-    
-    
+    // print out 1 - 10
+    while (n < 11)
+    {
+        printf("Loop number: %d\n", n);
+        n += 1;
+    }
+
     // find the largest number in the array
-    //printf("\n--------------------------\n");
+    // printf("\n--------------------------\n");
     for (int k = 1; k < 5; k++)
     {
         if (randArray[k] > largest)
@@ -91,8 +88,35 @@ while (m < 6)
             largest = randArray[k];
         }
     }
-    printf("The largest value is: %d", largest);
-    printf("\n\n--------------------------\n");
+    printf("\nThe largest value in the array is: %d\n", largest);
+    
+}
+//---------------------------------------------
+/*begin main*/
+//---------------------------------------------
+
+int main()
+{
+    int loopRuns = 0;
+    char userAnswer = '\0';
+    srand(time(NULL));
+    loopTasks();
+
+    while (userAnswer == '\0')
+    {
+        printf("\nWould you like to run the loops again? (Y/N): ");
+        scanf(" %c", &userAnswer);
+        if (userAnswer == 'y' || userAnswer == 'Y')
+        {
+            loopRuns += 1;
+            
+            loopTasks();
+            printf("You looped %d times.\n", loopRuns);
+            userAnswer = '\0';
+        }
+            
+    }
+    printf("\n--------------------------\n");
     printf("         The end! \n");
     printf("--------------------------\n");
 
