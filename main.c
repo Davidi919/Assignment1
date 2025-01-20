@@ -39,7 +39,7 @@ int main()
 {
 
     // loop variables
-    int i = 0;
+    int i,m = 0;
     int randArray[4];
     int largest = randArray[0];
 
@@ -61,7 +61,29 @@ int main()
         randArray[i] = rand() % ((50 - 1 + 1) + 1);
         i += 1;
     }
+
+
+    //print out the random array
+    //printf("\n--------------------------\n");
+    printf("Random Number Array: ");
+    for (int j = 0; j < 5; j++)
+    {
+        printf("%s%d", (j > 0 ? ", " : ""), randArray[j]);
+    }
+    printf("\n");
+while (m < 6)
+{
+    printf("yes\n");
+    m += 1;
+}
+
+    
+    
+    
+    
+    
     // find the largest number in the array
+    //printf("\n--------------------------\n");
     for (int k = 1; k < 5; k++)
     {
         if (randArray[k] > largest)
@@ -69,14 +91,10 @@ int main()
             largest = randArray[k];
         }
     }
-    printf("Random Number Array: ");
-    for (int i = 0; i < 5; i++)
-    {
-        printf("%s%d", (i > 0 ? ", " : ""), randArray[i]);
-    }
-    printf("\n");
-
-    printf("The largest value is: %d\n", largest);
+    printf("The largest value is: %d", largest);
+    printf("\n\n--------------------------\n");
+    printf("         The end! \n");
+    printf("--------------------------\n");
 
     //---------------------------------------------
     /*end program*/
